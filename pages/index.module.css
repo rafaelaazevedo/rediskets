@@ -17,7 +17,7 @@
 .main input {
   font-size: 16px;
   line-height: 24px;
-  color: #353740;
+  color: gray;
   font-family: "ColfaxAI", Helvetica, sans-serif;
 }
 .main {
@@ -27,7 +27,7 @@
   padding-top: 60px;
 }
 .main .icon {
-  width: 34px;
+  width: 250px;
 }
 .main h3 {
   font-size: 32px;
@@ -43,7 +43,7 @@
 }
 .main input[type="text"] {
   padding: 12px 16px;
-  border: 1px solid #10a37f;
+  border: 1px solid gray;
   border-radius: 4px;
   margin-bottom: 24px;
 }
@@ -54,7 +54,7 @@
 .main input[type="submit"] {
   padding: 12px 0;
   color: #fff;
-  background-color: #10a37f;
+  background-color:#ff7f00;
   border: none;
   border-radius: 4px;
   text-align: center;
