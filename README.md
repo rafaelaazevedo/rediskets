@@ -1,3 +1,5 @@
+![logo](https://github.com/rafaelaazevedo/rediskets/blob/main/public/logo.png)
+
 # Rediskets app
 
 This is a project to generate content for social media. To start just type the key words and then the format, list, bullet points, ranking, max number of characters. It is going to create the post and the hashtags associated with it.
