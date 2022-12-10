@@ -4,7 +4,9 @@ import styles from "./index.module.css";
 
 export default function Home() {
   const [wordInput, setWordInput] = useState("");
-  const [result, setResult] = useState();
+  const [resultImage, setResultImage] = useState();
+  const [resultText, setResultText] = useState();
+  const [resultTextTwitter, setResultTextTwitter] = useState();
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -16,7 +18,8 @@ export default function Home() {
       body: JSON.stringify({ word: wordInput }),
     });
     const data = await response.json();
-    setResult(data.result);
+    setResultImage(data.resultImage);
+    setResultText(data.resultText);
     setWordInput("");
   }
 
@@ -34,13 +37,16 @@ export default function Home() {
           <input
             type="text"
             name="word"
-            placeholder="Enter main idea"
+            placeholder="Enter key words"
             value={wordInput}
             onChange={(e) => setWordInput(e.target.value)}
           />
           <input type="submit" value="Generate content" />
         </form>
-        <div className={styles.result}>{result}</div>
+        <div className={styles.result}>
+          <img className={styles.resultImage} src={resultImage} />
+          {resultText}
+        </div>
       </main>
     </div>
   );
