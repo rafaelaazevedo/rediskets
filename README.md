@@ -1,4 +1,4 @@
-![logo](https://github.com/rafaelaazevedo/rediskets/blob/main/public/logo.png)
+<p align="center">![logo](https://github.com/rafaelaazevedo/rediskets/blob/main/public/logo.png)</p>
 
 # Rediskets app
 
