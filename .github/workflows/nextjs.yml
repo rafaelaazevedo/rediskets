@@ -12,9 +12,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-env:
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -64,9 +61,11 @@ jobs:
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
       - name: "Create env file"
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           touch .env
-          echo "OPENAI_API_KEY"=$OPENAI_API_KEY >> .env
+          echo "OPENAI_API_KEY=${OPENAI_API_KEY}" >> .env
           cat .env
       - name: Restore cache
         uses: actions/cache@v3
