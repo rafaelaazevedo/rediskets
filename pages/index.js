@@ -27,11 +27,11 @@ export default function Home() {
     <div>
       <Head>
         <title>Rediskets</title>
-        <link rel="icon" href="/logo-small.png" />
+        <link rel="icon" href="logo-small.png" />
       </Head>
 
       <main className={styles.main}>
-        <img src="/logo.png" className={styles.icon} />
+        <img src="logo.png" className={styles.icon} />
         <h3>Create my content</h3>
         <form onSubmit={onSubmit}>
           <input
