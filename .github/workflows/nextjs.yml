@@ -60,6 +60,10 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+      - name: 'Create env file'
+        run: |
+          touch .env
+          echo OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }} >> .env
       - name: Restore cache
         uses: actions/cache@v3
         with:
