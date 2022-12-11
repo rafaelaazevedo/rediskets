@@ -66,6 +66,7 @@ jobs:
         run: |
           touch .env
           echo "OPENAI_API_KEY=${OPENAI_API_KEY}" >> .env
+          echo ${OPENAI_API_KEY}
           cat .env
       - name: Restore cache
         uses: actions/cache@v3
