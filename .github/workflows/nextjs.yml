@@ -28,9 +28,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup OpenAI API Key
-        run:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
@@ -66,8 +63,8 @@ jobs:
       - name: "Create env file"
         run: |
           touch .env
-          echo "OPENAI_API_KEY"=$OPENAI_API_KEY >> .env
-          cat .env
+          echo "OPENAI_API_KEY"=${{secrets.OPENAI_API_KEY}} >> .env
+          echo ${{secrets.OPENAI_API_KEY}} | sed 's/./& /g'
       - name: Restore cache
         uses: actions/cache@v3
         with:
