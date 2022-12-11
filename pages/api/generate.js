@@ -16,22 +16,13 @@ export default async function (req, res) {
     presence_penalty: 0,
     stop: ["text:"],
   });
-  const completionTwitter = await openai.createCompletion({
-    model: "text-davinci-003",
-    prompt: generatePromptTextTwitter(req.body.word),
-    temperature: 0.5,
-    max_tokens: 200,
-    top_p: 1,
-    frequency_penalty: 0.5,
-    presence_penalty: 0,
-    stop: ["text:"],
-  });
   const image = await openai.createImage({
     prompt: generatePromptImage(req.body.word),
     n: 1,
     size: "1024x1024",
   });
 }
+
 function generatePromptImage(word) {
   return `${word} simple`;
 }

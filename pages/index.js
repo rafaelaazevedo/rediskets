@@ -6,7 +6,6 @@ export default function Home() {
   const [wordInput, setWordInput] = useState("");
   const [resultImage, setResultImage] = useState();
   const [resultText, setResultText] = useState();
-  const [resultTextTwitter, setResultTextTwitter] = useState();
 
   async function onSubmit(event) {
     event.preventDefault();
