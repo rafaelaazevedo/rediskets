@@ -12,6 +12,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+env:
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -28,9 +31,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup OpenAI API Key
-        env: github-pages
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
