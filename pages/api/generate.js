@@ -21,8 +21,11 @@ export default async function (req, res) {
     n: 1,
     size: "1024x1024",
   });
+  res.status(200).json({
+    resultImage: image.data.data[0].url,
+    resultText: completion.data.choices[0].text,
+  });
 }
-
 function generatePromptImage(word) {
   return `${word} simple`;
 }
