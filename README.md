@@ -1,3 +1,4 @@
+[![Deploy Next.js site to Pages](https://github.com/rafaelaazevedo/rediskets/actions/workflows/nextjs.yml/badge.svg)](https://github.com/rafaelaazevedo/rediskets/actions/workflows/nextjs.yml)
 <p align="center"> <img src="https://github.com/rafaelaazevedo/rediskets/blob/main/public/logo.png"></p>
 
 # Rediskets app
