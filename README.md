@@ -26,4 +26,4 @@ You should now be able to access the app at [http://localhost:3000](http://local
 <p align="center"><img width="650" alt="Screenshot 2022-12-10 at 16 13 04" src="https://user-images.githubusercontent.com/4616919/206864450-513cebb2-b5f0-4b9c-889b-537757685ccb.png"></p>
 
 
-Published website: https://rafaelaazevedo.github.io/rediskets/
+Published website: https://rediskets.netlify.app/
